@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>安全分析：小鹏汇天“陆地航母”</title>
+    <style>
+        body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; max-width: 860px; margin: 0 auto; padding: 32px 20px; line-height: 1.75; color: #1a1a1a; background: #fafafa; }
+        h1 { font-size: 1.8em; border-bottom: 3px solid #dc2626; padding-bottom: 12px; color: #991b1b; }
+        h2 { margin-top: 2.2em; color: #1e3a5f; border-left: 4px solid #dc2626; padding-left: 10px; }
+        h3 { color: #334155; margin-top: 1.5em; }
+        .tag { display: inline-block; background: #fee2e2; color: #b91c1c; padding: 2px 10px; border-radius: 12px; font-size: 0.85em; margin-right: 6px; }
+        .card { background: #fff; border-radius: 10px; padding: 18px 22px; margin: 16px 0; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+        .note { background: #fef2f2; border-left: 4px solid #dc2626; padding: 12px 16px; margin-top: 20px; color: #7f1d1d; }
+        ul { padding-left: 1.4em; }
+        strong { color: #b91c1c; }
+    </style>
+</head>
+<body>
+
+    <h1>系统安全分析：小鹏汇天“陆地航母” (X3-F)</h1>
+    <p><span class="tag">系统安全工程</span><span class="tag">分体式eVTOL</span><span class="tag">危险识别</span><span class="tag">风险缓解</span></p >
+
+    <h2>一、系统描述与安全目标</h2>
+    <div class="card">
+        <p>“陆地航母”采用全球首创的<b>分体式设计</b>（陆行体+飞行体）。这种构型虽然解决了补能和运输问题，但也引入了传统飞行器不具备的复杂交互风险。其系统安全核心目标为：<strong>确保机械连接的绝对可靠、飞行过程的动力冗余，以及低空运行的空域安全。</strong></p >
+    </div>
+
+    <h2>二、危险源识别与分析 (Hazard Analysis)</h2>
+    <div class="card">
+        <h3>1. 机械与接口风险</h3>
+        <ul>
+            <li><strong>分体结合/分离失效：</strong> 陆行体与飞行体的对接机构若在飞行中出现机械卡滞或意外解锁，将导致灾难性后果。</li>
+            <li><strong>结构疲劳：</strong> 陆行状态下长期的震动，可能导致飞行体碳纤维机臂或涵道结构的疲劳损伤。</li>
+        </ul>
+        <h3>2. 动力与能源风险</h3>
+        <ul>
+            <li><strong>电池热失控：</strong> 飞行体需要极高的放电倍率，航空级动力电池在极端工况下存在热失控起火风险。</li>
+            <li><strong>增程补能故障：</strong> 陆行体在野外为飞行体充电时，若电压电流控制不当，可能损坏飞行体电池。</li>
+        </ul>
+        <h3>3. 飞控与运行风险</h3>
+        <ul>
+            <li><strong>单点故障：</strong> 六轴六桨构型中，若发生单电机或单桨叶失效，飞控系统必须能瞬间重构动力分配。</li>
+            <li><strong>低空环境风险：</strong> 城市或营地低空环境复杂，面临鸟击、电线阻挡以及通信信号干扰的风险。</li>
+        </ul>
+    </div>
+
+    <h2>三、风险缓解与安全设计 (Risk Mitigation)</h2>
+    <div class="card">
+        <ul>
+            <li><strong>硬件冗余设计：</strong> 飞行体采用<strong>六轴六桨双涵道</strong>设计，具备多动力冗余。即使部分动力单元失效，飞控仍能保障安全降落。</li>
+            <li><strong>双认证电池体系：</strong> 飞行体电池不仅是汽车级，更通过了<strong>航空级适航安全认证</strong>，内置多重热失控隔离和防爆设计。</li>
+            <li><strong>接口安全锁：</strong> 分体连接处采用高强度的机械与电子双重锁止结构，结合前需进行双重校验，确保结合稳固。</li>
+            <li><strong>智能飞控与避障：</strong> 配备自动驾驶、自动避障系统以及整机降落伞（或应急气囊），降低人为操作失误带来的风险。</li>
+        </ul>
+    </div>
+
+    <h2>四、适航与合规分析</h2>
+    <div class="card">
+        <p>飞行汽车的安全不仅仅在于产品本身，更在于法规合规。目前小鹏汇天正在推进飞行体的<strong>型号合格证（TC）</strong>审定。在系统安全工程中，必须遵循“正向研发”理念，从设计源头满足中国民航局（CAAC）关于无人驾驶航空器及eVTOL的适航标准。同时，地面行驶部分也需满足严苛的汽车碰撞安全（C-NCAP）标准。</p >
+    </div>
+
+    <div class="note">
+        <strong>安全结论：</strong>“陆地航母”通过冗余构型和双认证电池极大地降低了硬件失效风险，但分体式架构的动态接口安全、以及未来大规模低空飞行的空域协同管理（UTM接入），仍是其商业化前必须持续验证和优化的系统性安全课题。
+    </div>
+
+</body>
+</html>
